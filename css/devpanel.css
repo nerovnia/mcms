@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+.device-panel {
+	width:15em;
+	position: relative;
+	float: left;
+	display: inline-block;
+
+	padding: 0.7em;
+	margin: 0.7em;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	border-radius: 1em;
+	color: #D3D3D3;
+}
+
+.dp-header {
+	color: white;
+	text-align: left;
+	font-weight: bold;
+	width: 100%;
+}
+
+.dp-header-text {
+	display: inline-block;
+	width: 12em;
+	text-align: center;
+}
+
+.add-dev, .del-dev {
+	display: inline-block;
+	width: 1em;	
+	height: 1em;	
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+div.add-dev:hover, div.del-dev:hover {
+	color: #132639;
+    background-color: white;
+}	
+
+.dp-header del-dev {
+	float: right;
+}
+
+.ip-address {
+	display: inline-block;
+	width: 100%;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.dp-ip {
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-align: left;
+}
+
+.dp-port {
+	display: inline-block;
+	float: right;
+	position: relative;
+	text-align: right;
+}
+
+.dp-driver, .dp-current-state {
+	display: inline-block;
+	width: 90%;
+	/*margin: 0.5em 0.5em 0 0;*/
+	margin: 0 auto;
+}
+
+.dp-driver-on, .dp-driver-off, .dp-driver-reset {
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-align: left;
+	width: 33.3%
+}
+
+.dp-driver-off {
+	text-align: center;
+}
+
+.dp-driver-reset {
+	text-align: right;
+}
+
+.btn-go, .btn-reset, .dp-cs-header, .dp-cs-message {
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-align: left;
+	width: 50%
+}
+
+.btn-reset {
+	text-align: right;
+}
+
+.dp-current-state{
+	margin: 1em 1em;
+}
+
+.dp-cs-header {
+	color: white;
+}
+
+.dp-cs-message {
+	color: red;
+}
+
+.radio-group {
+	padding: 1em 0em;
+}
+
+
+/*************************************
+  Horizontal menu bar
+*************************************/
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #132639;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: .2em .3em;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #2e4a66;}
+
+ul.topnav li a.active {background-color: #2e4a66;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+/*************************************
+  Delete device form 
+*************************************/
+
+#frm-yn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10em;
+	margin-left: -13em;
+	width: 26em;
+	height: 6em;
+
+	font-size: 1em;
+	text-align: center;
+	color: black;
+	visibility: hidden;
+	display: inline-block;
+}
+
+.frm-service-header {
+	font-size: 1em;
+	font-weight: bold;
+	background: white;
+	border-radius: 1em 1em 0 0;
+	width: 100%;
+}
+
+.btn-yes, .btn-no, .btn-add, .btn-cancel {
+	display: block;
+	float: left;
+	position: relative;
+	text-align: left;
+	width: 50%
+}
+
+.btn-no, .btn-cancel {
+	text-align: right;
+}
+
+.frm-service-msg {
+	display: block;
+	position: relative;
+	/*padding-top: 25em;*/
+	margin: 1em 1em;
+	text-align: center;
+}
+
+.frm-service-content {
+	display: inline-block;
+	border-radius: 0 0 1em 1em;
+	background: #D3D3D3;
+	width: 100%;
+	height: 100%;
+	padding: 0 1em 1em 1em;
+}
+
+
+/*************************************
+  Add device form 
+**************************************/
+#frm-add-new-device {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10em;
+	margin-left: -15em;
+	width: 25em;
+	height: 15em;
+
+	font-size: 1em;
+	text-align: center;
+	color: black;
+	visibility: hidden;
+	
+}
+#frm-add-new-device-shape {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.frm-adddevice-header {
+	font-size: 1em;
+	font-weight: bold;
+	background: white;
+	border-radius: 1em 1em 0 0;
+	width: 100%;
+	padding: 0 1em 1em 1em;
+}
+
+.frm-adddevice-content {
+	display: inline-block;
+	border-radius: 0 0 1em 1em;
+	background: #D3D3D3;
+	width: 100%;
+	height: 100%;
+	padding: 1em 1em;
+}
+
+.frm-inp-str {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	margin: .2em .2em;
+	text-align: center;
+	
+}
+
+.frm-inp-str-lbl, .frm-inp-str-inp {
+	width: 50%;
+	display: block;
+	float: left;
+	position: relative;
+	text-align: left;
+	padding: 0.01em 0em;	
+}
+
+.btn-block {
+	width: 100%;
+	padding: .5em 0.5em;
+	display: inline-block;
+}
+
+.frm-inp-str-inp {
+	text-align: right;
+}
+
+.btn-add {
+	text-align: left;
+}
+
+.btn-cancel {
+	text-align: right;
+}

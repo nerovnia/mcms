@@ -1,0 +1,15 @@
+[
+ {
+ 	"servername":"db3.ho.ua",
+ 	"username":"nerv",
+ 	"password":"1FJ4PKY2",
+ 	"dbname":"nerv"
+ },
+ {
+ 	"servername":"localhost",
+ 	"username":"root",
+ 	"password":"DalverSpider",
+  	"dbname":"nerv"
+ }
+
+]

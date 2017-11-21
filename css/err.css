@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#err-header {
+	color: #FFFFFF;
+	font-size: 2em;
+	font-weight: bold;
+	width: 100%;
+	border-bottom-style: dotted;
+	border-bottom-width: thin;
+	border-bottom-color: #FFFFFF;
+}
+
+#err-text {
+	width: 100%;
+	color: #FFFFFF;
+	padding: 1em 0em 0em 0em;
+}
+
+#err-content {
+	display: inline-block;
+	padding: 1em 1em 1em 1em;
+}
