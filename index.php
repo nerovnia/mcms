@@ -10,8 +10,8 @@ require 'model/template_class.php';
 //echo __DIR__;
 //echo $_REQUEST['route']; // show small request
 //echo $_SERVER['PATH_INFO'];
-
-
+//print_r($_GET);
+$options = $_GET;
 
 
 session_start();
@@ -43,11 +43,11 @@ if (empty($_SESSION['action'])) {
      */
 //} else {
     if (! checkAccessRules($_SESSION['action'], $_SESSION['operation'], $_SESSION['usr'])) {
-        $_SESSION['action'] = 'error';
-        $_SESSION['operation'] = 'read';
-        $_SESSION['action_mess'] = 'Access denied';
+      //  $_SESSION['action'] = 'api1';
+      //  $_SESSION['operation'] = 'read';
+      //  $_SESSION['action_mess'] = 'Access denied';
     }
-    goOver($_SESSION['action'], $_SESSION['operation']);
+    goOver($_SESSION['action'], $_SESSION['operation'], $options);
 //}
 //echo $_REQUEST['route'];
 
@@ -82,9 +82,9 @@ function addRules($addAction)
     saveJSONToFile(json_encode($rules += $addAction), 'pwd/accessrules.json');
 }
 
-function goOver($action, $operation)
+function goOver($action, $operation, $options)
 {
-  echo $action;
+  //echo $action;
     switch ($action) {
         case 'logout':
           //session_destroy();
@@ -102,7 +102,8 @@ function goOver($action, $operation)
           // after login need set start page for each user
           break;
         case 'api1':
-          showApi1($action, $operation);
+        echo 'api1';
+          showApi1($options);
           // after login need set start page for each user
           break;
         case 'settings':
@@ -157,8 +158,9 @@ return $str;
 /********************************************
 SHOW JSON API
 *********************************************/
-function showApi1($action, $operation) {
-  echo $action . " " . $operation;
+function showApi1($options) {
+  echo " set_ip = " . $options['set_ip'];
+  return true;
 }
 
 /********************************************
