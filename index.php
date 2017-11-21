@@ -159,7 +159,9 @@ return $str;
 SHOW JSON API
 *********************************************/
 function showApi1($options) {
-  echo " set_ip = " . $options['set_ip'];
+  $json = $options['json'];
+  echo " json = " . $json;
+  var_dump(json_decode($json));
   return true;
 }
 
