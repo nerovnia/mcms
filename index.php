@@ -101,6 +101,10 @@ function goOver($action, $operation)
           showAdmin();
           // after login need set start page for each user
           break;
+        case 'api1':
+          showApi1($action, $operation);
+          // after login need set start page for each user
+          break;
         case 'settings':
           showAdmin();
           // after login need set start page for each user
@@ -147,6 +151,14 @@ if (file_exists($fileWithModelPath))
      //include $fileWithModelPath;
 }
 return $str;
+}
+
+
+/********************************************
+SHOW JSON API
+*********************************************/
+function showApi1($action, $operation) {
+  echo $action . " " . $operation;
 }
 
 /********************************************
