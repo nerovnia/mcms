@@ -1,5 +1,6 @@
 <?php
 require 'model/template_class.php';
+require_once ("include/api1.php");
 //echo __DIR__;
 
 
@@ -156,14 +157,24 @@ return $str;
 
 
 /********************************************
-SHOW JSON API
-*********************************************/
+ * API 1.0
+ * SHOW JSON API 
+ ********************************************/
 function showApi1($options) {
   $json = $options['json'];
-  echo " json = " . $json;
-  var_dump(json_decode($json));
+  $obj = json_decode($json);
+//  print ;
+  switch ($obj->{'request'}) {
+      case 'set_ip':
+          api_setip($obj->{'text'}->{'machine'}, $obj->{'text'}->{'ip'});
+          break;
+  }
+  //echo " json = " . $json;
+  //var_dump(json_decode($json));
   return true;
 }
+
+
 
 /********************************************
 SHOW PAGES

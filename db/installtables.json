@@ -1,10 +1,10 @@
 [
   {
       "tablename":"users",
-      "sql":"CREATE TABLE IF NOT EXISTS users (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(15),password VARCHAR(30))"
+      "sql":"CREATE TABLE IF NOT EXISTS users (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, cname VARCHAR(15),password VARCHAR(30))"
    },
    {
-       "tablename":"users",
-       "sql":"CREATE TABLE IF NOT EXISTS users (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(15), password VARCHAR(30))"
+       "tablename":"workstations",
+       "sql":"CREATE TABLE IF NOT EXISTS workstations (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, cname VARCHAR(15), ip VARCHAR(15), ctime DATETIME)"
     }
 ]
